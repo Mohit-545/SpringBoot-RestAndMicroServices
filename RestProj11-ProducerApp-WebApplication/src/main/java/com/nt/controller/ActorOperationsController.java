@@ -1,6 +1,8 @@
 //ActorOperationsController.java
 package com.nt.controller;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,4 +39,10 @@ public class ActorOperationsController {
 		return new ResponseEntity<Actor>(actor, HttpStatus.OK);
 	}//method
 	
+	@GetMapping("/allReport")
+	public ResponseEntity<List<Actor>> getAllActorData(){
+		List<Actor> list = List.of(new Actor(1001, "Ishwar", 55, "Mumbai"), new Actor(1002, "Rohit", 38, "Puducherry"));
+		return new ResponseEntity<List<Actor>>(list, HttpStatus.OK);
+		
+	}//method
 }//class
