@@ -1,0 +1,27 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<h1 style="color: purple; text-align: center"><b><u>LOGIN PAGE</u></b></h1><br><br>
+
+<form th:action="@{/login}" method="POST">
+	<table border="1" align="center" bgcolor="violet" style="color:white; text-align: center">
+		<tr>
+			<td><b>Username ::</b></td>
+			<td><input type="text" name="username"/></td>
+		</tr>
+		<tr>
+			<td><b>User Password ::</b></td>
+			<td><input type="password" name="password"/></td>
+		</tr>
+		<tr>
+			<td><b><input type="submit" value="Login"></b></td>
+			<td><b><input type="reset" value="Cancel"></b></td>
+		</tr>
+	</table>
+</form>
+<br><br>
+
+<center>
+	<h2><span style="color: red;text-align: center" th:if=${param.error}>Invalid Credentials</span></h2><br><br>
+	<h2><span style="color: green;text-align: center" th:if=${param.logout}>Successfully Logged Out</span></h2><br><br>
+</center>
+</html>

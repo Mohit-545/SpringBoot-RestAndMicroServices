@@ -1,0 +1,16 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+
+		<h1 style="color: blue; text-align: center"><u>Customer Balance Page</u></h1><br>
+		<h2 style="color: green; text-align: center"> Current Account Balance :: 
+		<span th:text="${balance}"></span>
+		</h2><br>
+		
+		<h2 style="text-align: center"><a th:href="@{/bank/.}">Home</a></h2><br>
+		<h2 style="text-align: center"><a th:href="@{/signout}">Log Out</a></h2>
+
+</body>
+</html>
